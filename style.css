@@ -1,0 +1,369 @@
+/* Base Styles */
+body {
+  font-family: "Roboto", sans-serif;
+  background-image: url("https://png.pngtree.com/thumb_back/fh260/background/20230616/pngtree-faceted-abstract-background-in-3d-with-shimmering-iridescent-metallic-texture-of-image_3603748.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: #f0f8ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  overflow-y: auto; /* Allow scrolling */
+}
+
+/* Dark Overlay and Blur Effect */
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(8px);
+  z-index: -1;
+}
+
+/* Title Styles */
+header {
+  text-align: center;
+  margin-bottom: 40px;
+  color: #fff;
+  text-shadow: 0 0 20px rgba(0, 0, 0, 1), 0 0 30px rgba(0, 0, 0, 0.9),
+    0 0 40px rgba(0, 0, 0, 0.8); /* Black shadow for title */
+  animation: glow 2s ease-in-out infinite;
+}
+
+header h1 {
+  font-size: 48px;
+  font-weight: 700;
+  color: #00bcd4;
+  text-shadow: 0 0 15px rgba(0, 0, 0, 0.8), 0 0 30px rgba(0, 0, 0, 0.9); /* Black shadow */
+}
+
+/* Pulsating Glow Effect for Header */
+@keyframes glow {
+  0% {
+    text-shadow: 0 0 15px rgba(0, 0, 0, 0.8), 0 0 30px rgba(0, 0, 0, 1);
+  }
+  50% {
+    text-shadow: 0 0 20px rgba(0, 0, 0, 1), 0 0 40px rgba(0, 0, 0, 1.5);
+  }
+  100% {
+    text-shadow: 0 0 15px rgba(0, 0, 0, 0.8), 0 0 30px rgba(0, 0, 0, 0.9);
+  }
+}
+
+/* Container Styles */
+.container {
+  background: rgba(47, 47, 47, 0.85);
+  padding: 30px 50px;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6), 0 0 30px rgba(0, 0, 0, 0.6); /* Black shadow around the container */
+  width: 450px;
+  margin-bottom: 30px;
+  transition: all 0.3s ease-in-out;
+  z-index: 1;
+}
+
+.container:hover {
+  transform: scale(1.05) translateY(-10px);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.7), 0 0 40px rgba(0, 0, 0, 0.7); /* Stronger black shadow on hover */
+}
+
+/* Heading Styles */
+h2,h3 {
+    font-size: 28px;
+    text-align: center;
+    color: #00bcd4;
+    font-weight: 600;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.7), 0 0 15px rgba(0, 0, 0, 0.7); /* Black shadow for subheadings */
+    letter-spacing: 1.5px;
+    animation: pulse 1.5s infinite;
+}
+
+
+h5{
+    line-height: 2;
+margin: 0; 
+padding: 0;
+font-size: 25px;   
+  text-align: center;
+  color: #ffffff;
+  font-weight: 600;
+  text-shadow: 0 0 30px rgba(0, 0, 0, 0.7), 0 0 15px rgba(0, 0, 0, 0.7); /* Black shadow for subheadings */
+  letter-spacing: 2.5px;
+  animation: pulse 1.5s infinite;
+}
+
+h4 {
+    
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      font-size: 18px;   
+      text-align: center;
+      color: #ffffff;
+      font-weight: 600;
+      text-shadow: 0 0 20px rgba(0, 0, 0, 0.7), 0 0 15px rgba(0, 0, 0, 0.7); /* Black shadow for subheadings */
+      animation: pulse 1.5s infinite;
+    }
+    
+
+/* Pulse Animation for Headings */
+@keyframes pulse {
+  0% {
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.7), 0 0 20px rgba(0, 0, 0, 0.7),
+      0 0 30px rgba(0, 0, 0, 0.7);
+  }
+  50% {
+    text-shadow: 0 0 20px rgba(0, 0, 0, 0.8), 0 0 30px rgba(0, 0, 0, 0.8),
+      0 0 40px rgba(0, 0, 0, 0.8);
+  }
+  100% {
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.7), 0 0 20px rgba(0, 0, 0, 0.7),
+      0 0 30px rgba(0, 0, 0, 0.7);
+  }
+}
+
+/* Form Elements Styles */
+select,
+input,
+button {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 25px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  font-size: 16px;
+  background-color: #333;
+  color: #f0f8ff;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Focus Effect for Form Elements */
+select:focus,
+input:focus,
+button:focus {
+  outline: none;
+  border-color: #00bcd4;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.7); /* Black shadow on focus */
+}
+
+/* Button Styles */
+button {
+  background: #007bff;
+  color: white;
+  cursor: pointer;
+  border: none;
+  font-size: 18px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  padding: 18px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6); /* Subtle black shadow on button */
+}
+
+button:hover {
+  background: #0056b3;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.7); /* Stronger black shadow on hover */
+}
+
+/* Result Section Styles */
+.result {
+  background: #1e1e1e;
+  padding: 20px;
+  border-radius: 8px;
+  margin-top: 20px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.3); /* Black shadow for results */
+  color: #d0f0c0;
+  font-size: 16px;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+/* Paragraph Styles */
+p {
+  margin: 10px 0;
+  font-size: 16px;
+}
+
+p1{
+    font-style: italic;
+    font-size: 16px;
+    color: #488d96;
+}
+
+/* Error Message Styles */
+.error {
+  color: #ff3b3b;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Info Message Styles */
+.info {
+  font-size: 14px;
+  color: #bbb;
+  text-align: center;
+}
+
+/* Footer Styles */
+footer {
+  margin-top: 30px;
+  color: #aaa;
+  font-size: 14px;
+  text-align: center;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.8); /* Black shadow for footer */
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 600px) {
+  .container {
+    padding: 20px 30px;
+    width: 90%;
+  }
+
+  button {
+    font-size: 16px;
+  }
+}
+
+/* Profile Icon and Options */
+.user-info {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.user-logo {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 3px solid #ffffff;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.8), 0 0 30px rgba(0, 0, 0, 1);
+  transition: transform 0.3s ease;
+}
+
+.user-logo:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 1), 0 0 40px rgba(0, 0, 0, 1.5);
+}
+
+/* Profile Options */
+.options {
+  position: absolute;
+  top: 80px;
+  right: 20px; /* Adjusted for better alignment */
+  background-color: rgba(
+    47,
+    47,
+    47,
+    0.9
+  ); /* Slightly more opaque for better visibility */
+  padding: 30px 40px; /* Increased padding for a bigger box */
+  border-radius: 15px;
+  width: 320px; /* Wider box */
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.7);
+  display: none;
+  z-index: 3;
+  animation: slideIn 0.4s ease-out; /* Smooth transition */
+}
+
+.options.show {
+  display: block;
+  animation: slideIn 0.3s ease-out;
+}
+
+/* Prevent profile from pushing content down */
+.container {
+  position: relative; /* Ensure containers don't move */
+}
+
+/* Ensure result box stays visible */
+.result {
+  position: relative;
+  z-index: 1; /* Ensure result box stays below profile options */
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Profile Picture */
+.profile-picture {
+  background-size: cover;
+  background-position: center;
+  width: 150px; /* Larger size for profile picture */
+  height: 150px;
+  border-radius: 50%;
+  border: 5px solid #00bcd4;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.8), 0 0 35px rgba(0, 0, 0, 1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin: 0 auto 20px; /* Centering the picture */
+}
+
+.profile-picture:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 1), 0 0 50px rgba(0, 0, 0, 1.5);
+}
+
+/* Profile Details */
+.profile-details {
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Contact Information */
+.contact-info {
+  text-align: left;
+}
+
+.contact-info p {
+  font-size: 16px;
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+}
+
+.contact-info a {
+  color: #f8f0ff;
+  font-size: 16px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.contact-info i {
+  margin-right: 8px;
+}
+
+/* Icon Image Styling */
+.contact-info img {
+  width: 20px; /* Adjust width */
+  height: 20px; /* Adjust height */
+  margin-right: 10px; /* Space between icon and text */
+  vertical-align: middle; /* Align the icon with text */
+}
+
+.fb-icon,
+.whatsapp-icon,
+.phone-icon,
+.email-icon {
+  width: 24px; /* Larger size for icons */
+  height: 24px;
+}

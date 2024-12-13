@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Results | Bangladesh Army University of Science and Technology (BAUST)</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- University Title Section -->
+    <header>
+        <h1>BANGLADESH ARMY UNIVERSITY OF SCIENCE & TECHNOLOGY (BAUST)</h1>
+    </header>
+
+    <!-- Highest Marks Section -->
+    <div class="container">
+        <h2>Highest Marks</h2>
+        <select id="highestSubject">
+            <option value="EEE1163">EEE1163</option>
+            <option value="PHY1131">PHY1131</option>
+            <option value="ENG1127">ENG1127</option>
+            <option value="MATH1141">MATH1141</option>
+            <option value="CSE1101">CSE1101</option>
+        </select>
+        <button onclick="showHighest()">Show Highest Marks</button>
+        <div class="result" id="highestResult"></div>
+    </div>
+
+    <!-- Individual Result Section -->
+    <div class="container">
+        <h3>View Your Result</h3>
+        <input type="text" id="studentID" placeholder="Enter Your ID">
+        <input type="text" id="studentName" placeholder="Enter Your Name">
+        <select id="studentSubject">
+            <option value="EEE1163">EEE1163</option>
+            <option value="PHY1131">PHY1131</option>
+            <option value="ENG1127">ENG1127</option>
+            <option value="MATH1141">MATH1141</option>
+            <option value="CSE1101">CSE1101</option>
+        </select>
+        <button onclick="showStudentResult()">View Result</button>
+        <div class="result" id="studentResult"></div>
+    </div>
+
+    <!-- Profile Icon -->
+    <div class="user-info" onclick="toggleOptions()">
+        <img src="icon.jpg" alt="Your Icon" class="user-logo">
+    </div>
+
+    <!-- Profile Options -->
+    <div class="options" id="options" style="display: none;">
+        <h4>Facing a Problem? I'm Here to Help!</h4>
+        <div class="profile-picture" style="background-image: url('profile.jpg');"></div>
+        <div class="profile-details">
+            <h5>MD. JAHID HASAN</h5>
+            <p1>CSE-19th, Section: C | Class Representative (CR)</p1>
+            
+            <!-- Contact Information with Image Icons -->
+            <div class="contact-info">
+                <p><a href="https://www.facebook.com/MJ2k0604?mibextid=ZbWKwL" target="_blank"><img src="facebook-icon.png" class="fb-icon" alt="Facebook"> Facebook</a></p>
+                <p><a href="https://wa.me/+8801703988303" target="_blank"><img src="whatsapp-icon.png" class="whatsapp-icon" alt="WhatsApp"> WhatsApp</a></p>
+                <p><img src="phone-icon.png" class="phone-icon" alt="Phone"> +880 170 398 8303</p>
+                <p><img src="email-icon.png" class="email-icon" alt="Email"> jahid.19th.126@gmail.com</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2024 - Student Results by Jahid
+    </footer>
+
+    <!-- Load the script as a module -->
+    <script type="module" src="script.js"></script>
+</body>
+</html>
