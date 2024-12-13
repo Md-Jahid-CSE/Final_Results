@@ -119,8 +119,8 @@ function showStudentResult() {
             const lastThreeDigits = studentId.slice(-3);
             resultDiv.innerHTML = `
                 <p><strong>Subject:</strong> ${subject}</p>
-                <p><strong>Name:</strong> ${student.name} (ID: ${lastThreeDigits}) out of 120</p>
-                <p><strong>Total Marks:</strong> ${totalMarks.toFixed(2)}</p>
+                <p><strong>Name:</strong> ${student.name} (ID: ${lastThreeDigits})</p>
+                <p><strong>Total Marks:</strong> ${totalMarks.toFixed(2)} Out of 120</p>
                 <p><strong>Attendance:</strong> ${student.attendance}</p>
                 <p><strong>CT-1:</strong> ${ct1}</p>
                 <p><strong>CT-2:</strong> ${ct2}</p>
