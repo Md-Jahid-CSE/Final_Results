@@ -78,22 +78,22 @@ header h1 {
 }
 
 /* Heading Styles */
-h2,h3 {
-    font-size: 28px;
-    text-align: center;
-    color: #00bcd4;
-    font-weight: 600;
-    text-shadow: 0 0 10px rgba(0, 0, 0, 0.7), 0 0 15px rgba(0, 0, 0, 0.7); /* Black shadow for subheadings */
-    letter-spacing: 1.5px;
-    animation: pulse 1.5s infinite;
+h2,
+h3 {
+  font-size: 28px;
+  text-align: center;
+  color: #00bcd4;
+  font-weight: 600;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.7), 0 0 15px rgba(0, 0, 0, 0.7); /* Black shadow for subheadings */
+  letter-spacing: 1.5px;
+  animation: pulse 1.5s infinite;
 }
 
-
-h5{
-    line-height: 2;
-margin: 0; 
-padding: 0;
-font-size: 25px;   
+h5 {
+  line-height: 2;
+  margin: 0;
+  padding: 0;
+  font-size: 25px;
   text-align: center;
   color: #ffffff;
   font-weight: 600;
@@ -103,16 +103,14 @@ font-size: 25px;
 }
 
 h4 {
-    
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-      font-size: 18px;   
-      text-align: center;
-      color: #ffffff;
-      font-weight: 600;
-      text-shadow: 0 0 20px rgba(0, 0, 0, 0.7), 0 0 15px rgba(0, 0, 0, 0.7); /* Black shadow for subheadings */
-      animation: pulse 1.5s infinite;
-    }
-    
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 18px;
+  text-align: center;
+  color: #ffffff;
+  font-weight: 600;
+  text-shadow: 0 0 20px rgba(0, 0, 0, 0.7), 0 0 15px rgba(0, 0, 0, 0.7); /* Black shadow for subheadings */
+  animation: pulse 1.5s infinite;
+}
 
 /* Pulse Animation for Headings */
 @keyframes pulse {
@@ -192,10 +190,10 @@ p {
   font-size: 16px;
 }
 
-p1{
-    font-style: italic;
-    font-size: 16px;
-    color: #488d96;
+.info {
+  font-style: italic;
+  font-size: 16px;
+  color: #488d96;
 }
 
 /* Error Message Styles */
@@ -206,7 +204,7 @@ p1{
 }
 
 /* Info Message Styles */
-.info {
+.info-message {
   font-size: 14px;
   color: #bbb;
   text-align: center;
@@ -219,18 +217,6 @@ footer {
   font-size: 14px;
   text-align: center;
   text-shadow: 0 0 10px rgba(0, 0, 0, 0.8); /* Black shadow for footer */
-}
-
-/* Responsive Design for Smaller Screens */
-@media (max-width: 600px) {
-  .container {
-    padding: 20px 30px;
-    width: 90%;
-  }
-
-  button {
-    font-size: 16px;
-  }
 }
 
 /* Profile Icon and Options */
@@ -261,12 +247,7 @@ footer {
   position: absolute;
   top: 80px;
   right: 20px; /* Adjusted for better alignment */
-  background-color: rgba(
-    47,
-    47,
-    47,
-    0.9
-  ); /* Slightly more opaque for better visibility */
+  background-color: rgba(47, 47, 47, 0.9); /* Slightly more opaque for better visibility */
   padding: 30px 40px; /* Increased padding for a bigger box */
   border-radius: 15px;
   width: 320px; /* Wider box */
@@ -366,4 +347,186 @@ footer {
 .email-icon {
   width: 24px; /* Larger size for icons */
   height: 24px;
+}
+
+/* Media Queries for Responsive Design */
+
+/* Tablet View (max-width: 1024px) */
+@media screen and (max-width: 1024px) {
+  .container {
+    width: 600px;
+    padding: 25px 40px;
+  }
+
+  header h1 {
+    font-size: 42px;
+  }
+
+  h2,
+  h3 {
+    font-size: 24px;
+  }
+
+  h5 {
+    font-size: 22px;
+  }
+
+  h4 {
+    font-size: 16px;
+  }
+
+  .profile-picture {
+    width: 130px;
+    height: 130px;
+  }
+
+  .options {
+    width: 280px;
+    padding: 25px 35px;
+  }
+}
+
+/* Mobile View (max-width: 768px) */
+@media screen and (max-width: 768px) {
+  body {
+    justify-content: flex-start;
+    padding-top: 80px; /* Space for fixed profile icon */
+  }
+
+  header h1 {
+    font-size: 36px;
+  }
+
+  .container {
+    width: 90%;
+    padding: 25px 20px;
+    margin: 20px auto;
+  }
+
+  h2,
+  h3 {
+    font-size: 22px;
+  }
+
+  h5 {
+    font-size: 20px;
+  }
+
+  h4 {
+    font-size: 16px;
+  }
+
+  select,
+  input,
+  button {
+    padding: 12px;
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+
+  button {
+    padding: 15px;
+    font-size: 16px;
+  }
+
+  .result {
+    font-size: 14px;
+    padding: 15px;
+  }
+
+  .user-logo {
+    width: 50px;
+    height: 50px;
+    border: 2px solid #ffffff;
+  }
+
+  .options {
+    width: 90%;
+    right: 5%;
+    top: 70px;
+    padding: 20px 25px;
+  }
+
+  .profile-picture {
+    width: 120px;
+    height: 120px;
+  }
+
+  .contact-info img {
+    width: 18px;
+    height: 18px;
+  }
+
+  footer {
+    font-size: 12px;
+    padding: 15px 10px;
+  }
+}
+
+/* Extra Small Devices (max-width: 480px) */
+@media screen and (max-width: 480px) {
+  header h1 {
+    font-size: 28px;
+  }
+
+  .container {
+    padding: 20px 15px;
+  }
+
+  h2,
+  h3 {
+    font-size: 20px;
+  }
+
+  h5 {
+    font-size: 18px;
+  }
+
+  h4 {
+    font-size: 14px;
+  }
+
+  select,
+  input,
+  button {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  button {
+    padding: 12px;
+    font-size: 14px;
+  }
+
+  .result {
+    font-size: 13px;
+    padding: 10px;
+  }
+
+  .user-logo {
+    width: 40px;
+    height: 40px;
+  }
+
+  .options {
+    width: 95%;
+    right: 2.5%;
+    top: 60px;
+    padding: 15px 20px;
+  }
+
+  .profile-picture {
+    width: 100px;
+    height: 100px;
+  }
+
+  .contact-info img {
+    width: 16px;
+    height: 16px;
+  }
+
+  footer {
+    font-size: 12px;
+    padding: 10px 5px;
+  }
 }
