@@ -95,6 +95,7 @@ function showStudentResult() {
             return;
         }
 
+        // Search for the student by ID and Name
         const foundEntry = Object.entries(students).find(([studentId, studentData]) =>
             studentId.trim() === id.trim() &&
             studentData.name.trim().toLowerCase().replace(/\./g, '') === nameInput
@@ -104,7 +105,7 @@ function showStudentResult() {
             resultDiv.innerHTML = "<p class='error'>No matching record found.</p>";
         } else {
             const [studentId, student] = foundEntry;
-            const totalMarks = safeParse(student.total);
+            const totalMarks = safeParse(student.total); // Fetch total directly from Firebase
 
             const lastThreeDigits = studentId.slice(-3);
             resultDiv.innerHTML = `
@@ -112,6 +113,9 @@ function showStudentResult() {
                 <p><strong>Name:</strong> ${student.name} (ID: ${lastThreeDigits})</p>
                 <p><strong>Total Marks:</strong> ${totalMarks.toFixed(2)} Out of 120</p>
                 <p><strong>Attendance:</strong> ${student.attendance}</p>
+                <p><strong>CT1:</strong> ${student.ct1}</p>
+                <p><strong>CT2:</strong> ${student.ct2}</p>
+                <p><strong>CT3:</strong> ${student.ct3}</p>
                 <p><strong>CT:</strong> ${student.ct}</p>
                 <p><strong>Performance:</strong> ${student.performance}</p>
                 <p><strong>Assignment:</strong> ${student.assignment}</p>
@@ -122,6 +126,7 @@ function showStudentResult() {
         resultDiv.innerHTML = "<p class='error'>Error fetching data: " + error.message + "</p>";
     });
 }
+
 
 // Expose showStudentResult globally
 window.showStudentResult = showStudentResult; 
